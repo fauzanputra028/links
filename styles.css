@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background:black;
+    background-image: url('./baground.gif');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    opacity: 0;
+    animation: fadeIn 2s 0.5s forwards;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
+}
+
+.social-icons {
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 2s 1.5s forwards;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: maroon;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    background: transparent; /* Ubah latar belakang menjadi transparan */
+    color: paleturquoise; /* Ubah warna teks agar tetap terlihat */
+    text-decoration: none;
+    border: 2px solid white; /* Tambahkan border agar tombol tetap terlihat */
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+}
+
+.links a::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: white; /* Warna lingkaran */
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: background 0.3s;
+}
+
+.links a:hover {
+    background: white; /* Warna latar belakang saat di-hover */
+    color: white; /* Warna teks saat di-hover */
+}
+
+.links a:hover::after {
+    background: aqua; /* Warna lingkaran saat di-hover */
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .links a {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .links a {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
